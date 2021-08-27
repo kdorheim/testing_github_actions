@@ -16,6 +16,6 @@ knitr::opts_chunk$set(
 
 
 ```{r}
-pint("this is atest")
+print("this is atest")
 
 ```

@@ -2,7 +2,7 @@
 title: "Use Pre-Built Inputs"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Use Pre Built Inputs}
+  %\VignetteIndexEntry{Use Pre-Built Inputs}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
