@@ -32,8 +32,6 @@ jobs:
           install.packages(c("remotes", "rcmdcheck"), repos = "https://cloud.r-project.org")          
           remotes::install_github("JGCRI/hector")
           remotes::install_deps(dependencies = TRUE)
-          install.packages(c("remotes", "rcmdcheck"))
-          remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
       - name: Check
         run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
