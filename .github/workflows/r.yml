@@ -23,16 +23,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
       - name: Set up R ${{ matrix.r-version }}
         uses: r-lib/actions/setup-r@ffe45a39586f073cc2e9af79c4ba563b657dc6e3
         with:
           r-version: ${{ matrix.r-version }}
+          
       - name: Install dependencies
         run: |
           install.packages(c("remotes", "rcmdcheck"), repos = "https://cloud.r-project.org")          
           remotes::install_github("JGCRI/hector")
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
-      - name: Check
-        run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
+        
+      - name: Install XQuartz on MacOS
+        if: runner.os == 'macOS'
+        run: brew install xquartz
         shell: Rscript {0}
+        
+        
