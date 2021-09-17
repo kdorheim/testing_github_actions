@@ -51,7 +51,7 @@ jobs:
       - name: Query dependencies
         run: |
           install.packages('remotes')
-          install.packages('udunits2')
+          #install.packages('udunits2')
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
         shell: Rscript {0}
@@ -75,6 +75,7 @@ jobs:
       - name: Install XQuartz on MacOS
         if: runner.os == 'macOS'
         run: brew install xquartz
+             brew install udunits
 
       - name: Install dependencies
         run: |
