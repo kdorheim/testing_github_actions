@@ -36,9 +36,5 @@ jobs:
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
         
-      - name: Install XQuartz on MacOS
-        if: runner.os == 'macOS'
-        run: brew install xquartz
-        shell: Rscript {0}
         
         
