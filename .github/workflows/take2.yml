@@ -74,8 +74,7 @@ jobs:
       #    sudo -s eval "$sysreqs"
       - name: Install XQuartz on MacOS
         if: runner.os == 'macOS'
-        run: brew install xquartz
-             brew install udunits
+        run: brew install udunits
 
       - name: Install dependencies
         run: |
