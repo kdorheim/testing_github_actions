@@ -7,7 +7,9 @@ Authors@R: c(person("Kalyn", "Dorheim", email = "kalyn.dorheim@pnnl.gov", role =
     person("Chris", "Vernon", email = "chris.vernon@pnnl.gov", role = c("ctb")),
     person(given = "Alexey", family = "Shiklomanov", role = c("ctb"), email = "alexey.shiklomanov@gmail.com"))
 Description: This pacakge prepares, documents, and formats the inputs for Hector. 
-Depends: R (>= 2.10)
+Depends: 
+    R (>= 2.10), 
+    hector
 Imports:
     data.table (>= 1.12.8), 
     zoo (>= 1.8), 
